@@ -12,9 +12,9 @@ sudo cp -v *.py /usr/local/bin/
 sudo chmod 774 /usr/local/bin/waveshare_ups.py
 
 #Copy yaml but don't overwrite
-CONFIG=/etc/waveshare_ups.yaml
+CONFIG=waveshare_ups.yaml
 echo "Copy config to $CONFIG if it doesn't exist already"
-sudo cp -v -n waveshare_ups.yaml /etc/
+sudo cp -v -n $CONFIG /etc/$CONFIG
 sudo chmod 664 $CONFIG
 
 #Copy systemd script, run daemon-reload
