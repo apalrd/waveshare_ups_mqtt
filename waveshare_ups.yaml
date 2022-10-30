@@ -1,0 +1,36 @@
+#MQTT
+#If this section does not exist, program will quit
+mqtt:
+  #Broker has no default and must be provided
+  broker: 'telstar.palnet.net'
+  #If username is defined, both username and password must be defined
+  #username: 'user'
+  #password: 'pass
+  #The remaining fields have defaults shown below
+  #port: 1883
+  #prefix: ups
+
+#Waveshare UPS config
+ups:
+  #Model can be one of:
+  #32V_2A
+  #16V_5A
+  #AFAIK this covers all of the products, let me know if it doesn't
+  model: '32V_2A'
+  #Address on the I2C bus
+  #Defaults to 0x42 for 32V_2A
+  #Defaults to 0x43 for 16V_5A
+  address: 0x42
+
+  #For update rate parameters, the following values are the defaults
+  
+  #Update Rate in seconds
+  #Data will be published at least this fast
+  #May publish faster if the data changes rapidly
+  update_rate: 30
+  #Minimum change in current to trigger an update
+  update_cur: 0.1
+  #Minimum change in bus voltage to trigger an update
+  update_volt: 0.1
+  #Minimum change in battery % to trigger an update
+  update_pct: 5
