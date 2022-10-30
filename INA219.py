@@ -1,3 +1,5 @@
+#This file was provided by Waveshare for the Pi UPS, Pi UPS B, and Pi UPS C models
+#The license / copyright is unclear
 import smbus
 import time
 
