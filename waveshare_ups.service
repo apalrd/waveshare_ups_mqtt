@@ -1,0 +1,10 @@
+[Unit]
+Description=Waveshare UPS to MQTT Monitor
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/waveshare_ups.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
