@@ -92,7 +92,7 @@ def Main():
             print("MQTT: Username is valid, but password is None")
             print("MQTT: Not using authentication")
         else:
-            Client.username_ps_set(Uname,Pword)
+            Client.username_pw_set(Uname,Pword)
 
     #Last Will and Testament
     Client.will_set(Topic,"{\"Status\": 0}",0,True)
